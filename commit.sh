@@ -1,1 +1,1 @@
-git add . && git commit -m 'adding html files' && git push -u origin main
+git add . && git commit -m 'updated customer reviews' && git push -u origin main
