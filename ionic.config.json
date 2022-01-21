@@ -1,0 +1,7 @@
+{
+  "name": "Quesers_ios",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
