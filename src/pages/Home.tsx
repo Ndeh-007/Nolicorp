@@ -20,6 +20,7 @@ import {
   IonPage,
   IonPopover,
   IonRow,
+  IonText,
   IonToolbar,
 } from "@ionic/react";
 import "../style/widgets/header.css";
@@ -56,7 +57,7 @@ function Home() {
                       <IonNote>
                         Do not deny yourself the pleasure of having the best
                         quality prints
-                      </IonNote> 
+                      </IonNote>
                     </div>
                   </IonCol>
                   <IonCol>
@@ -88,21 +89,19 @@ function Home() {
                   sizeMd={`6`}
                   className={`ion-align-self-center `}
                 >
-                  <section className="services ion-padding">
-                    <h2> We have an amazing Customer Service</h2>
-                    <p>
-                      At Nolicorp we focus on providing our customers with{" "}
-                      <b>REAL VALUE</b>. This can be seen in the{" "}
-                      <b>Quality of our Prints</b>, <b>Affordability</b>
-                      <b>Amazing Customer Service</b>
-                    </p>
-                    <p>
-                      <h5>
-                        Working with so many companies, brands and clients over
-                        the years we are proud to say we give the very best and
-                        we continue to improve
-                      </h5>
-                    </p>
+                  <section className="services ion-padding text"> 
+                      <h2> We have an amazing Customer Service</h2>
+                      <p>
+                        At Nolicorp we focus on providing our customers with{" "}
+                        <b>REAL VALUE</b>. This can be seen in the{" "}
+                        <b>Quality of our Prints</b>, <b>Affordability</b>
+                        <b>Amazing Customer Service</b>
+                      </p>
+                      <p> 
+                          Working with so many companies, brands and clients
+                          over the years we are proud to say we give the very
+                          best and we continue to improve 
+                      </p> 
                   </section>
                 </IonCol>
               </IonRow>
@@ -113,7 +112,7 @@ function Home() {
               <IonRow>
                 <IonCol></IonCol>
                 <IonCol size={`12`} sizeSm={`11`} sizeMd={`10`}>
-                  <section className="services">
+                  <section className="services text">
                     <h2 className={`heading`}>OUR SERVICES</h2>
                     <p>
                       At Nolicorp we provide tons of services. few of our
@@ -175,7 +174,8 @@ function Home() {
                     sizeMd={`6`}
                     className={`ion-align-self-center `}
                   >
-                    <section className="services ion-padding">
+                    <section className="services ion-padding text">
+                      
                       <h2> We have an amazing Customer Service</h2>
                       <p>
                         At Nolicorp we focus on providing our customers with{" "}
@@ -206,7 +206,7 @@ function Home() {
                 <IonRow>
                   <IonCol></IonCol>
                   <IonCol size={`12`} sizeSm={`11`} sizeMd={`10`}>
-                    <section className="team">
+                    <section className="team text">
                       <h2 className={`heading`}>OUR TEAM</h2>
                       <p>
                         At Nolicorp we Hire the best proffessionals to work on

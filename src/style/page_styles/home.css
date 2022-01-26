@@ -3,7 +3,7 @@
 }
 
 .no-pading {
-    padding: 0
+    padding: 0;
 }
 
 .no-pading ion-col,
@@ -13,13 +13,17 @@
 }
 
 .divider {
-    height: 12vh
+    height: 12vh;
 }
 
 .heading {
-    color: var(--ion-color-danger)
+    color: var(--ion-color-danger);
 }
 
 .col-card {
-    height: 96%
+    height: 96%;
+}
+
+.text {
+    line-height: 1.5rem;
 }
