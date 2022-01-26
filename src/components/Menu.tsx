@@ -4,7 +4,7 @@ import React from 'react'
 
 function Menu() {
     return (
-        <IonMenu contentId={`main`}>
+        <IonMenu contentId={`main`} menuId='user'>
             <IonHeader>
                 <IonToolbar color={`dark`}>
                     <IonTitle>
