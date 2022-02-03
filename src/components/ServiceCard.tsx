@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 import { IonButton, IonCard, IonCardContent, IonCardTitle, IonContent, IonIcon, IonImg, IonPopover, IonToolbar } from '@ionic/react'
 import {  logoWhatsapp} from "ionicons/icons";
 
-
-
-
+ 
 
 function ServiceCard(props:{serv:{img:string, name:string}}) {
     const {serv} = props;

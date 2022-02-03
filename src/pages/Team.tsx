@@ -103,6 +103,7 @@ function Team() {
                                   objectPosition: `0% 0%`,
                                 }}
                                 src={m.photo}
+                                alt=""
                               ></img>
                               <IonCardContent className={`capitalize`}>
                                 <IonCardTitle>{m.name}</IonCardTitle>

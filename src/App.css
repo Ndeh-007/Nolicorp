@@ -1,7 +1,6 @@
-/* .App ion-split-pane {
-    --side-max-width:100px  
+.App ion-split-pane {
+    --side-max-width: 100px
 }
-*/
 
 .capitalize * {
     text-transform: capitalize;
