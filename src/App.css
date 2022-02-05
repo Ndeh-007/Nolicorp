@@ -1,36 +1,34 @@
-
-.App ion-split-pane{
-    --side-max-width:100px
+.App ion-split-pane {
+    --side-max-width: 100px
 }
-.capitalize *{
+
+.capitalize * {
     text-transform: capitalize;
 }
 
-.App  *{
-    --ion-color-primary : var(--ion-color-success);
+.App * {
+    --ion-color-primary: var(--ion-color-success);
 }
 
-
- ion-item.input{
-  border-radius: 10px;
-  border: 1px solid grey;
-  padding: 4px;
+ion-item.input {
+    border-radius: 10px;
+    border: 1px solid grey;
+    padding: 4px;
 }
 
-.mobile{
+.mobile {
     display: none;
 }
-.web{
+
+.web {
     display: block;
 }
 
-
-
-@media (max-width:700px){
-  .mobile{
-     display: block;
-  }
-  .web{
-      display: none;
-  }
+@media (max-width:700px) {
+    .mobile {
+        display: block;
+    }
+    .web {
+        display: none;
+    }
 }

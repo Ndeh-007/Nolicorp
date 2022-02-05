@@ -1,0 +1,27 @@
+.tag {
+    background: var(--ion-color-primary);
+    padding: 1rem;
+    border-radius: 0px 5px 5px 0px;
+    width: max-content;
+    color: var(--ion-color-light);
+}
+
+.bg-secondary {
+    background: var(--ion-color-secondary);
+}
+
+.bg-danger {
+    background: var(--ion-color-danger);
+}
+
+.bg-warning {
+    background: var(--ion-color-warning);
+}
+
+.bg-dark {
+    background: var(--ion-color-dark);
+}
+
+.bg-medium {
+    background: var(--ion-color-medium);
+}

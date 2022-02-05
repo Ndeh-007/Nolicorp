@@ -1,23 +1,29 @@
-
-
-.text-center{
+.text-center {
     text-align: center;
 }
 
-.no-pading{
-    padding:0
-}
-.no-pading ion-col, .no-padding ion-row{
-    padding:0;
-    margin:0;
-}
-.divider{
-    height:12vh
+.no-pading {
+    padding: 0;
 }
 
-.heading{
-    color: var(--ion-color-danger)
+.no-pading ion-col,
+.no-padding ion-row {
+    padding: 0;
+    margin: 0;
 }
-.col-card{
-    height:96%
+
+.divider {
+    height: 12vh;
+}
+
+.heading {
+    color: var(--ion-color-danger);
+}
+
+.col-card {
+    height: 96%;
+}
+
+.text {
+    line-height: 1.5rem;
 }
