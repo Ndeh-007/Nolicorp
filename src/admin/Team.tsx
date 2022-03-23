@@ -52,36 +52,36 @@ const AdminTeamPage: React.FC = () => {
   }
 
   return (
-    <div className="ion-padding-top ion-margin-top">
+    <div className="ion-padding-top ion-margin-top" >
       <div className="tag">
         <IonTitle size="large">Statistics</IonTitle>
       </div>
       <IonRow className="ion-padding">
         <IonCol size={`12`} sizeSm={`6`} sizeMd={`6`} sizeLg={`3`}>
-          <IonCard>
+          <div className='card'>
             <IonCardHeader>
               <IonCardTitle>
                 Employee Count
                 <div className="ion-float-right">8</div>
               </IonCardTitle>
             </IonCardHeader>
-          </IonCard>
+          </div>
         </IonCol>
         <IonCol size={`12`} sizeSm={`6`} sizeMd={`6`} sizeLg={`3`}>
-          <IonCard>
+          <div className='card'>
             <IonCardHeader>
               <IonCardTitle>
                 Interns
                 <div className="ion-float-right">3</div>
               </IonCardTitle>
             </IonCardHeader>
-          </IonCard>
+          </div>
         </IonCol>
         <IonCol size={`12`} sizeSm={`6`} sizeMd={`6`} sizeLg={`3`}>
-          <IonCard
+          <div
             color="medium"
             role={`buttton`}
-            className="ion-text-center ion-activatable ripple-parent"
+            className="ion-text-center ion-activatable ripple-parent card "
             onClick={() => {
               setAddNewMemberModal(true);
             }}
@@ -93,14 +93,14 @@ const AdminTeamPage: React.FC = () => {
                 Member
               </IonCardTitle>
             </IonCardHeader>
-          </IonCard>
+          </div>
         </IonCol>
       </IonRow>
       <div className="tag">
         <IonTitle size="large">Team Members</IonTitle>
       </div>
 
-      <IonRow className="ion-padding">
+      <IonRow  >
         {NolicorpTeam.map((member, index) => {
           return (
             <IonCol
@@ -110,9 +110,9 @@ const AdminTeamPage: React.FC = () => {
               sizeMd={`6`}
               sizeLg={`3`}
             >
-              <IonCard>
-                {/* <IonImg src={member.photo}></IonImg> */}
-                <IonCardHeader>
+              <div className='card'  >
+                <img style={{height:'300px', width:'100%','objectFit':'cover','objectPosition':'0% 0'}} src={member.photo}></img>
+                <IonCardContent>
                   <IonCardTitle>{member.name}</IonCardTitle>
                   <IonCardSubtitle>
                     {member.position}{" "}
@@ -130,12 +130,12 @@ const AdminTeamPage: React.FC = () => {
                       </IonButtons>
                     </div>
                   </IonCardSubtitle>
-                </IonCardHeader>
-              </IonCard>
+                </IonCardContent>
+              </div>
             </IonCol>
           );
         })}
-      </IonRow>
+      </IonRow> 
 
       <IonModal
         isOpen={addNewMemberModal}

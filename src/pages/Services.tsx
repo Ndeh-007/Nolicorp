@@ -91,7 +91,12 @@ function Services() {
                                                 With us you can print on any format, on any surface and even 3D printing
                                             </p> */}
                       <IonRow>
-                        {services.map((serv) => (
+                        {services.map((serv,index) => {
+                           if(index>services.length/2){
+                             return;
+                           }
+                          
+                          return(
                           <IonCol
                             size={`12`}
                             sizeSm={`12`}
@@ -100,7 +105,7 @@ function Services() {
                           >
                             <ServiceCard serv={serv}></ServiceCard>
                           </IonCol>
-                        ))}
+                        )})}
                         <IonCol
                           className={`ion-align-self-center`}
                           size={`12`}
@@ -108,7 +113,7 @@ function Services() {
                           sizeMd={`6`}
                           sizeLg={`4`}
                         >
-                          <IonCard className={`text-center`} mode={`ios`}>
+                          <IonCard target='__blank' href={'https://wa.me/+237674451988'} className={`text-center`} mode={`ios`}>
                             <IonCardContent>
                               <IonCardSubtitle>
                                 ORDER FOR YOUR OWN
@@ -141,7 +146,11 @@ function Services() {
                                                 With us you can print on any format, on any surface and even 3D printing
                                             </p> */}
                       <IonRow>
-                        {services.map((serv) => (
+                        {services.map((serv,index) =>{ 
+                            if(index<=services.length/2){
+                              return;
+                            }
+                            return (
                           <IonCol
                             size={`12`}
                             sizeSm={`12`}
@@ -150,7 +159,7 @@ function Services() {
                           >
                             <ServiceCard serv={serv}></ServiceCard>
                           </IonCol>
-                        ))}
+                        )})}
                         <IonCol
                           className={`ion-align-self-center`}
                           size={`12`}
@@ -158,7 +167,7 @@ function Services() {
                           sizeMd={`6`}
                           sizeLg={`4`}
                         >
-                          <IonCard className={`text-center`} mode={`ios`}>
+                          <IonCard  target='__blank' href={'https://wa.me/+237674451988'} className={`text-center`} mode={`ios`}>
                             <IonCardContent>
                               <IonCardSubtitle>
                                 ORDER FOR YOUR OWN
@@ -177,53 +186,11 @@ function Services() {
                       </IonRow>
                     </p>
                     <div className="divider"></div>
-                    <h2 className={``}>Past Questions</h2>
+                    {/* <h2 className={``}>Past Questions</h2> */}
 
-                    <p>
-                      <br />
-                      <br />
-                      {/* <h3 className={`heading`}>LARGE FORMAT PRINTING</h3>
-                                            <p>
-                                                We have the latest state of the art machines for large format printing.
-                                                With us you can print on any format, on any surface and even 3D printing
-                                            </p> */}
-                      <IonRow>
-                        {services.map((serv) => (
-                          <IonCol
-                            size={`12`}
-                            sizeSm={`12`}
-                            sizeMd={`6`}
-                            sizeLg={`4`}
-                          >
-                            <ServiceCard serv={serv}></ServiceCard>
-                          </IonCol>
-                        ))}
-                        <IonCol
-                          className={`ion-align-self-center`}
-                          size={`12`}
-                          sizeSm={`12`}
-                          sizeMd={`6`}
-                          sizeLg={`4`}
-                        >
-                          <IonCard className={`text-center`} mode={`ios`}>
-                            <IonCardContent>
-                              <IonCardSubtitle>
-                                ORDER FOR YOUR OWN
-                              </IonCardSubtitle>
-                              <br />
-                              <br />
-                              <IonFabButton
-                                style={{ margin: `auto` }}
-                                color={`dark`}
-                              >
-                                <IonIcon icon={chevronForward}></IonIcon>
-                              </IonFabButton>
-                            </IonCardContent>
-                          </IonCard>
-                        </IonCol>
-                      </IonRow>
-                    </p>
-                  </section>
+                    
+                   
+                   </section>
                 </IonCol>
                 <IonCol></IonCol>
               </IonRow>
@@ -239,31 +206,70 @@ function Services() {
 
 export default Services;
 
-const services = [
+export const services = [
   {
-    img: local_images.tshirt,
-    name: `Rollups & Backdrops`,
+    img: local_images.BillBoards,
+    name: `Bill Boards`,
   },
   {
-    img: local_images.tshirt,
+    img: local_images.Banners,
     name: `Banners`,
   },
   {
-    img: local_images.tshirt,
-    name: `Light Boards`,
+    img: local_images.InvitationCards,
+    name: `Invitation Cards`,
   },
   {
-    img: local_images.tshirt,
-    name: `BillBoard`,
+    img: local_images.tshirts,
+    name: `Tshirts`,
   },
   {
-    img: local_images.tshirt,
-    name: `BillBoard`,
+    img: local_images.caps,
+    name: `Caps`,
   },
   {
-    img: local_images.tshirt,
-    name: `BillBoard`,
+    img: local_images.keyholders,
+    name: `Key Holders`,
   },
+  {
+    img: local_images.mugs,
+    name: `Mugs`,
+  },
+  {
+    img: local_images.Rollups,
+    name: `Roll ups`,
+  },
+  {
+    img: local_images.stamps,
+    name: `Stamps`,
+  },
+  {
+    img: local_images.portraits,
+    name: `Portraits`,
+  },
+  {
+    img: local_images.Backdrops,
+    name: `Backdrops`,
+  },
+  {
+    img: local_images.certs,
+    name: `Certificates`,
+  }, {
+    img: local_images.booklets,
+    name: `Funeral Booklets`,
+  },
+  {
+    img: local_images.BusinessCards,
+    name: `BUsiness Cards`,
+  },
+  {
+    img: local_images.binding,
+    name: `binding`,
+  },
+  {
+    img: local_images.labels,
+    name: `Labels`,
+  }
 ];
 
 const team = [

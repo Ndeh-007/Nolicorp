@@ -35,6 +35,7 @@ import {
 } from "ionicons/icons";
 import React, { useRef, useState } from "react";
 import { NolicorpTeam, Team } from "../components/data";
+import { services } from "../pages/Services";
 import "./Admin.css";
 
 const Services: React.FC = () => {
@@ -49,6 +50,13 @@ const Services: React.FC = () => {
     }
   }
 
+  function addService(){
+
+  }
+  function getServices(){
+    
+  }
+
   return (
     <div className="ion-padding-top ion-margin-top">
       <div className="tag bg-secondary">
@@ -56,31 +64,31 @@ const Services: React.FC = () => {
       </div>
       <IonRow className="ion-padding">
         <IonCol size={`12`} sizeSm={`6`} sizeMd={`6`} sizeLg={`3`}>
-          <IonCard>
-            <IonCardHeader>
+          <div className='card'>
+            <IonCardContent>
               <IonCardTitle>
                 Service Count
                 <div className="ion-float-right">18</div>
               </IonCardTitle>
-            </IonCardHeader>
-          </IonCard>
+            </IonCardContent>
+          </div>
         </IonCol>
         <IonCol size={`12`} sizeSm={`6`} sizeMd={`6`} sizeLg={`3`}>
-          <IonCard
-            color="medium"
-            role={`buttton`}
-            className="ion-text-center ion-activatable ripple-parent"
+          <div
+            className="card ion-text-center ion-activatable ripple-parent"
             onClick={() => {
-              setAddNewServiceModal(true);
+              // setAddNewServiceModal(true);
+              pictureInput.current?.click();
+
             }}
           >
             <IonRippleEffect></IonRippleEffect>
-            <IonCardHeader>
+            <IonCardContent>
               <IonCardTitle>
                 <IonIcon icon={bagAdd}></IonIcon> &nbsp; Add New Service
               </IonCardTitle>
-            </IonCardHeader>
-          </IonCard>
+            </IonCardContent>
+          </div>
         </IonCol>
       </IonRow>
       <div className="tag bg-secondary">
@@ -97,7 +105,7 @@ const Services: React.FC = () => {
               sizeMd={`6`}
               sizeLg={`3`}
             >
-              <IonCard>
+              <div className='card'>
                 {/* <IonImg src={service.photo}></IonImg> */}
                 <IonCardHeader>
                   <IonCardTitle>
@@ -117,7 +125,7 @@ const Services: React.FC = () => {
                     </div>
                   </IonCardTitle>
                 </IonCardHeader>
-              </IonCard>
+              </div>
             </IonCol>
           );
         })}
@@ -141,28 +149,31 @@ const Services: React.FC = () => {
               size="large"
               className="ion-padding-end ion-float-end ion-margin-top"
               onClick={() => {
-                setAddNewServiceModal(false);
+                setAddNewServiceModal(false)
               }}
             >
               <IonIcon icon={closeOutline} size="large"></IonIcon>
             </IonButton>
           </IonItem>
 
-          <IonItem>
-            <IonLabel position="floating">Name</IonLabel>
-            <IonInput></IonInput>
-          </IonItem>
-          <IonItem>
+          <div className="ion-padding">
+            <IonItem>
+              <IonLabel position="floating">Name of Service</IonLabel>
+              <IonInput></IonInput>
+            </IonItem>
+          </div>
+          {/* <IonItem>
             <IonLabel position="floating">Position</IonLabel>
             <IonInput></IonInput>
           </IonItem>
           <IonItem>
             <IonLabel position="floating">Description</IonLabel>
             <IonTextarea></IonTextarea>
-          </IonItem>
+          </IonItem> */}
 
           <IonItem lines="none">
             <IonButton
+              mode='ios'
               size="small"
               color="dark"
               slot="start"
@@ -172,16 +183,7 @@ const Services: React.FC = () => {
             >
               Select Picture
             </IonButton>
-            <input
-              hidden
-              ref={pictureInput}
-              type={"file"}
-              onChange={(e) => {
-                let temp = e.target.files;
-                setFileName(temp?.item(0)?.name);
-                console.log(fileName);
-              }}
-            ></input>
+
             <IonText slot="end">
               <h6>{fileName}</h6>
             </IonText>
@@ -197,29 +199,19 @@ const Services: React.FC = () => {
           </IonCol>
         </IonRow>
       </IonModal>
+      <input
+        hidden
+        ref={pictureInput}
+        type={"file"}
+        onChange={(e) => {
+          let temp = e.target.files;
+          setFileName(temp?.item(0)?.name);
+          setAddNewServiceModal(true);
+          console.log(fileName);
+        }}
+      ></input>
     </div>
   );
 };
 
 export default Services;
-
-const services = [
-  {
-    name: `Rollups & Backdrops`,
-  },
-  {
-    name: `Banners`,
-  },
-  {
-    name: `Light Boards`,
-  },
-  {
-    name: `BillBoard`,
-  },
-  {
-    name: `BillBoard`,
-  },
-  {
-    name: `BillBoard`,
-  },
-];

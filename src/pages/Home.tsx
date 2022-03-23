@@ -31,6 +31,7 @@ import Footer from "../components/Footer";
 import ServiceCard from "../components/ServiceCard";
 import Header from "../components/Header";
 import { NolicorpTeam } from "../components/data";
+import { services } from "./Services";
 
 function Home() {
   return (
@@ -144,7 +145,7 @@ function Home() {
                           sizeMd={`6`}
                           sizeLg={`4`}
                         >
-                          <IonCard className={`text-center`} mode={`ios`}>
+                          <IonCard button routerLink={`/services`} className={`text-center`} mode={`ios`}>
                             <IonCardContent>
                               <IonCardSubtitle>
                                 SEE ALL SERVICES
@@ -283,30 +284,3 @@ function Home() {
 }
 
 export default Home;
-
-const services = [
-  {
-    img: local_images.tshirt,
-    name: `Rollups & Backdrops`,
-  },
-  {
-    img: local_images.tshirt,
-    name: `Banners`,
-  },
-  {
-    img: local_images.tshirt,
-    name: `Light Boards`,
-  },
-  {
-    img: local_images.tshirt,
-    name: `Bill Board`,
-  },
-  {
-    img: local_images.tshirt,
-    name: `Bill Board`,
-  },
-  {
-    img: local_images.tshirt,
-    name: `Bill Board`,
-  },
-];

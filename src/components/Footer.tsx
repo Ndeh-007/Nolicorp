@@ -17,13 +17,13 @@ function Footer() {
                     <IonRow>
                         <IonCol size={`12`} sizeSm={`6`} sizeMd={`4`}>
                             <h4>Quick Links</h4>
-                            <IonItem button color={`none`} lines={`none`}>
+                            <IonItem routerLink='/about' button color={`none`} lines={`none`}>
                                 <small>About Us</small>
                             </IonItem>
-                            <IonItem button color={`none`} lines={`none`}>
+                            <IonItem routerLink='/services' button color={`none`} lines={`none`}>
                                 <small>Services</small>
                             </IonItem>
-                            <IonItem button color={`none`} lines={`none`}>
+                            <IonItem routerLink='/school' button color={`none`} lines={`none`}>
                                 <small>Schools</small>
                             </IonItem>
                         </IonCol>
@@ -33,19 +33,19 @@ function Footer() {
                             <br />
                             <h4>Contact Us</h4>
                             <IonItem button color={`none`} lines={`none`}>
-                                <IonIcon slot={`start`} icon={mailOutline}></IonIcon>
+                                <IonIcon color={`danger`} slot={`start`} icon={mailOutline}></IonIcon>
                                 <small>support@nolicorp.com</small>
                             </IonItem>
-                            <IonItem target={`__blank`} href={`https://wa.me/+237674451988`} button color={`none`} lines={`none`}>
-                                <IonIcon slot={`start`} icon={callOutline}></IonIcon>
+                            <IonItem  target={`__blank`} href={`https://wa.me/+237674451988`} button color={`none`} lines={`none`}>
+                                <IonIcon color={`success`}slot={`start`} icon={callOutline}></IonIcon>
                                 <small>+237 6 74 45 19 88</small>
                             </IonItem>
                             <IonItem button color={`none`} lines={`none`}>
-                            <IonIcon slot={`start`} icon={homeOutline}></IonIcon>
+                            <IonIcon color={`warning`}  slot={`start`} icon={homeOutline}></IonIcon>
                                 <small>Nolicorp, SW Buea, CMR</small>
                             </IonItem>
-                            <IonItem button color={`none`} lines={`none`}>
-                            <IonIcon slot={`start`} icon={peopleOutline}></IonIcon>
+                            <IonItem routerLink='/team'  button color={`none`} lines={`none`}>
+                            <IonIcon color={`tertiary`} slot={`start`} icon={peopleOutline}></IonIcon>
                                 <small>Team</small>
                             </IonItem>
                             <IonItem button color={`none`} lines={`none`}>

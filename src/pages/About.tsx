@@ -76,7 +76,7 @@ function About() {
             </IonRow>
             <IonRow>
               <IonCol></IonCol>
-              <IonCol size={`12`} sizeSm={`11`} sizeMd={`9`} sizeLg={`8`}>
+              <IonCol size={`11`} sizeSm={`11`} sizeMd={`9`} sizeLg={`8`}>
                 {" "}
                 <div className="divider"></div>
                 <section className="who-we-are text">
@@ -178,30 +178,3 @@ function About() {
 }
 
 export default About;
-
-const services = [
-  {
-    img: local_images.banner,
-    name: `Rollups & Backdrops`,
-  },
-  {
-    img: local_images.banner,
-    name: `Banners`,
-  },
-  {
-    img: local_images.banner,
-    name: `Light Boards`,
-  },
-  {
-    img: local_images.banner,
-    name: `Bill Board`,
-  },
-  {
-    img: local_images.banner,
-    name: `Bill Board`,
-  },
-  {
-    img: local_images.banner,
-    name: `Bill Board`,
-  },
-];
